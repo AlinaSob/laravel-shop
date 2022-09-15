@@ -40,5 +40,9 @@ class DatabaseSeeder extends Seeder
         (new AddCartItem)($cart, $products->random(1)[0], 1);
         (new AddCartItem)($cart, $products->random(1)[0], 1);
         (new AddCartItem)($cart, $products->random(1)[0], 1);
+
+        $this->call([
+            FilterSeeder::class,
+        ]);
     }
 }
